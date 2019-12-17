@@ -5,7 +5,7 @@ const LanguageService = {
   getLanguage: async () => {
     let data;
     try {
-      let res = await fetch(`${config.REACT_APP_API_BASE}/language`, {
+      let res = await fetch(`${config.API_ENDPOINT}/language`, {
         headers: {
           'authorization': `Bearer ${TokenService.getAuthToken()}`
         }
@@ -19,7 +19,7 @@ const LanguageService = {
   getLanguageHead: async () => {
     let data;
     try {
-      let res = await fetch(`${config.REACT_APP_API_BASE}/language/head`, {
+      let res = await fetch(`${config.API_ENDPOINT}/language/head`, {
         headers: {
           'authorization': `Bearer ${TokenService.getAuthToken()}`
         }
@@ -43,12 +43,11 @@ const LanguageService = {
       }
     }
     try {
-      let res = await fetch(`${config.REACT_APP_API_BASE}/language/guess`, options)
+      let res = await fetch(`${config.API_ENDPOINT}/language/guess`, options)
       data = await res.json()
     } catch (e) {
       throw new Error(e)
     }
-    console.log(data);
     return data;
   }
 }
