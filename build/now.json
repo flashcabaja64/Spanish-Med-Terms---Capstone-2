@@ -1,12 +1,7 @@
 {
   "version": 2,
-  "name": "SpanishMedTerms",
-  "alias": "SpanishMedTerms",
-  "build": {
-    "env": {
-      "REACT_APP_API_BASE": "https://learn-spanish-med-terms-api.herokuapp.com/api"
-    }
-  },
+  "name": "hubert-spanishmedterms",
+  "alias": "hubert-spanishmedterms",
   "routes": [
     {
       "src": "^/static/(.*)",

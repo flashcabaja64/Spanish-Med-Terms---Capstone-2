@@ -18,7 +18,6 @@ class Dashboard extends Component {
 
   async componentDidMount() {
     const { language } =  await LanguageService.getLanguage();  
-    console.log(language);
     this.context.setScore(language.total_score);
     this.context.setLanguage(language.name);
   }
